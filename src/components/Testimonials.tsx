@@ -128,6 +128,11 @@ export const Testimonials: React.FC = () => {
 
         </div>
 
+        {/* Ethical Note / Disclaimer */}
+        <p className="mt-8 text-center text-xs text-brand-muted/70 font-sans max-w-2xl mx-auto">
+          * Depoimentos ilustrativos de experiências com o processo terapêutico em TCC. Os resultados da psicoterapia são individuais e variam conforme o engajamento e a singularidade de cada paciente.
+        </p>
+
       </div>
     </section>
   );
