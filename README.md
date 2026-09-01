@@ -1,37 +1,51 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Landing Page — Erica Luena | Psicologia Clínica 🦋
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Landing page institucional para a psicóloga clínica **Erica Luena** (CRP: 06/159579), com foco em Terapia Cognitivo-Comportamental (TCC), controle da ansiedade, saúde mental e reeducação da relação com a alimentação.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tecnologias Utilizadas
 
-## React Compiler
+- **React 19** com **TypeScript**
+- **Vite 5** (Build tool e ambiente de desenvolvimento)
+- **Tailwind CSS** (Estilização responsiva e componentes)
+- **Lucide React** (Ícones vetoriais modernos)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🚀 Como Executar o Projeto Localmente
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Pré-requisitos
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### 1. Clonar o Repositório
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd site_erika
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
-=======
-# landingpage_erika_luena
-Landing Page Erica Luena Psicóloga Clinica
->>>>>>> 7978cb4ba7cf649f9d2a475bf8e871a4fb7ddc77
+### 2. Instalar Dependências
+```bash
+npm install
+```
+
+### 3. Executar o Servidor de Desenvolvimento
+```bash
+npm run dev
+```
+Acesse `http://localhost:5173/` no seu navegador.
+
+### 4. Gerar o Build de Produção
+```bash
+npm run build
+```
+Os arquivos otimizados para publicação serão gerados na pasta `dist/`.
+
+---
+
+## 🔒 Segurança e Privacidade
+
+Este repositório segue boas práticas de versionamento:
+- Nenhum dado de produção, credencial ou chave privada é versionado.
+- Arquivos de build (`dist/`), caches (`.vite/`) e variáveis locais (`.env`) estão listados no `.gitignore`.

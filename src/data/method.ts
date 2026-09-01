@@ -14,18 +14,18 @@ export interface MethodStep {
 export const methodMetrics: MetricItem[] = [
   {
     percentage: 95,
-    label: "Eficácia Comprovada",
-    sublabel: "Estudos científicos em TCC"
+    label: "Foco na Autonomia",
+    sublabel: "Estratégias práticas em TCC"
   },
   {
-    percentage: 87,
-    label: "Satisfação Pacientes",
-    sublabel: "Melhora expressiva na ansiedade"
+    percentage: 98,
+    label: "Satisfação no Atendimento",
+    sublabel: "Acolhimento & escuta empática"
   },
   {
-    percentage: 92,
-    label: "Mudança Duradoura",
-    sublabel: "Manutenção do peso a longo prazo"
+    percentage: 90,
+    label: "Mudança de Hábitos",
+    sublabel: "Foco na constância a longo prazo"
   }
 ];
 

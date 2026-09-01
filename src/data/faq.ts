@@ -18,7 +18,7 @@ export const faqItems: FAQItem[] = [
   {
     id: "item-3",
     question: "Terapia online é tão eficaz quanto a presencial?",
-    answer: "Com certeza. Diversos estudos científicos comprovam que a Terapia Cognitivo-Comportamental online possui a exata mesma eficácia da presencial, com a vantagem do conforto da sua casa, flexibilidade de horários e ausência de deslocamento."
+    answer: "Sim. A Terapia Cognitivo-Comportamental (TCC) na modalidade on-line é amplamente reconhecida pelos órgãos oficiais de Psicologia por demonstrar eficácia equivalente ao formato presencial, oferecendo o conforto do seu ambiente, flexibilidade de horários e praticidade sem deslocamentos."
   },
   {
     id: "item-4",
