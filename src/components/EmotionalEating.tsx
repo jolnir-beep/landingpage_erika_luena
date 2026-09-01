@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, Moon, RefreshCw, Scale, BrainCircuit, ZapOff } from 'lucide-react';
 import { SectionBadge } from './SectionBadge';
+import { images } from '../data/images';
 
 interface EmotionalCardProps {
   icon: React.ReactNode;
@@ -83,6 +84,44 @@ export const EmotionalEating: React.FC = () => {
               description={card.description}
             />
           ))}
+        </div>
+
+        {/* Literature & Specialization Showcase Banner */}
+        <div className="mt-14 bg-white rounded-3xl p-6 sm:p-8 border border-brand-teal/15 shadow-soft-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 space-y-4 text-left">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brand-teal bg-brand-teal-veryLight px-3 py-1 rounded-full inline-block">
+              📚 Embasamento Científico & Prático
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-brand-dark">
+              Superando as <span className="text-brand-coral">Armadilhas da Dieta</span> e Reeducando o Comportamento
+            </h3>
+            <p className="font-sans text-brand-muted text-sm sm:text-base leading-relaxed">
+              O processo de emagrecimento definitivo e controle da ansiedade exige entender o funcionamento do cérebro. Trabalhamos com literatura científica atualizada para ajudar você a identificar gatilhos emocionais, quebrar o ciclo de restrição e compulsão e construir hábitos duradouros.
+            </p>
+          </div>
+          
+          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+            <div className="relative group overflow-hidden rounded-2xl border border-brand-teal/10 shadow-soft-md">
+              <img
+                src={images.comportamentoAlimentar}
+                alt="Erica Luena estudando Ciência do Comportamento Alimentar"
+                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/85 to-transparent p-2.5 text-center">
+                <span className="text-[11px] font-medium text-white block truncate">Comportamento Alimentar</span>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl border border-brand-teal/10 shadow-soft-md">
+              <img
+                src={images.armadilhasDieta}
+                alt="Erica Luena com o livro Armadilhas da Dieta"
+                className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/85 to-transparent p-2.5 text-center">
+                <span className="text-[11px] font-medium text-white block truncate">Armadilhas da Dieta</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>

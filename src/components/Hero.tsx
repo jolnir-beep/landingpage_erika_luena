@@ -3,6 +3,7 @@ import { Brain, Sparkles, Video, ArrowRight } from 'lucide-react';
 import { SectionBadge } from './SectionBadge';
 import { CTAButton } from './CTAButton';
 import { images } from '../data/images';
+import { WHATSAPP_LINK } from '../data/config';
 
 export const Hero: React.FC = () => {
   return (
@@ -41,7 +42,7 @@ export const Hero: React.FC = () => {
 
             {/* CTAs */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-              <CTAButton href="#cta-final" variant="primary" className="!py-4">
+              <CTAButton href={WHATSAPP_LINK} variant="primary" className="!py-4">
                 Agendar Minha Psicoterapia On-line 👇
               </CTAButton>
 

@@ -45,10 +45,14 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
     }
   };
 
+  const isExternal = href.startsWith('http');
+
   return (
     <a
       href={href}
       onClick={handleClick}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       className={`${baseClasses} ${variantClasses} ${widthClass} ${className}`}
     >
       <span>{children}</span>

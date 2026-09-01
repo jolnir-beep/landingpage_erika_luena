@@ -3,6 +3,7 @@ import { Award, CheckCircle2 } from 'lucide-react';
 import { SectionBadge } from './SectionBadge';
 import { CTAButton } from './CTAButton';
 import { images } from '../data/images';
+import { WHATSAPP_LINK } from '../data/config';
 
 export const AboutSection: React.FC = () => {
   const pillars = [
@@ -79,7 +80,7 @@ export const AboutSection: React.FC = () => {
             </div>
 
             <div className="pt-4">
-              <CTAButton href="#cta-final" variant="primary">
+              <CTAButton href={WHATSAPP_LINK} variant="primary">
                 Agendar Sessão com Erica 👇
               </CTAButton>
             </div>

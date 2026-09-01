@@ -1,6 +1,9 @@
-// Centralized images mapping for easy replacement
+// Centralized images mapping for Erika Luena
 export const images = {
-  hero: "/assets/images/hero-placeholder.jpg",
-  about: "/assets/images/about-placeholder.jpg",
-  avatarPlaceholder: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250"
+  hero: "/assets/images/erika-hero.jpg",
+  about: "/assets/images/erika-about.jpg",
+  comportamentoAlimentar: "/assets/images/erika-comportamento-alimentar.jpg",
+  armadilhasDieta: "/assets/images/erika-armadilhas-dieta.jpg",
+  tccSessao: "/assets/images/erika-tcc-sessao.jpg",
 };
+

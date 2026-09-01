@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home, Clock, ShieldCheck, NavigationOff, Lock, Wifi, Star } from 'lucide-react';
 import { SectionBadge } from './SectionBadge';
+import { images } from '../data/images';
 
 export const OnlineTherapy: React.FC = () => {
   const benefits = [
@@ -90,25 +91,28 @@ export const OnlineTherapy: React.FC = () => {
                 </div>
 
                 {/* Simulated Screen Body */}
-                <div className="relative bg-gradient-to-br from-brand-teal-dark via-brand-teal to-brand-teal-light rounded-2xl p-8 text-white text-center flex flex-col items-center justify-center min-h-[220px] shadow-inner">
+                <div className="relative rounded-2xl overflow-hidden shadow-inner h-[280px] sm:h-[300px] group border border-white/20">
+                  <img
+                    src={images.tccSessao}
+                    alt="Erica Luena em Atendimento On-line"
+                    className="w-full h-full object-cover object-top filter brightness-[0.95] group-hover:scale-105 transition-transform duration-500"
+                  />
                   
-                  {/* Decorative Subtle Avatar Circle */}
-                  <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md p-1 border-2 border-white/40 mb-3 flex items-center justify-center animate-pulse-glow">
-                    <div className="w-full h-full rounded-full bg-brand-coral flex items-center justify-center text-white font-serif text-2xl font-bold">
-                      EL
-                    </div>
+                  {/* Subtle Top-Right HD Badge */}
+                  <div className="absolute top-3 right-3 bg-brand-dark/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] text-white flex items-center gap-1.5 border border-white/20">
+                    <Wifi className="w-3 h-3 text-emerald-400" />
+                    <span>HD 1080p</span>
                   </div>
 
-                  <h3 className="font-serif text-xl font-bold tracking-wide">Erica Luena | Psicóloga</h3>
-                  <p className="font-sans text-xs text-white/80 font-normal mt-0.5">Sessão Individual TCC • Criptografia HD</p>
-
-                  <div className="mt-4 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs text-white/90">
-                    <div className="flex items-center gap-1">
-                      <Wifi className="w-3.5 h-3.5 text-emerald-300" />
-                      <span>Conexão Estável</span>
+                  {/* Gradient Overlay & Details Bar at Bottom */}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent p-4 sm:p-5 flex items-end justify-between text-white">
+                    <div>
+                      <h3 className="font-serif text-lg font-bold tracking-wide">Erica Luena | Psicóloga</h3>
+                      <p className="font-sans text-xs text-white/80 font-normal">Sessão Individual TCC • CRP: 06/159579</p>
                     </div>
-                    <span>•</span>
-                    <span>50 min</span>
+                    <div className="hidden sm:flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white border border-white/20">
+                      <span>50 min</span>
+                    </div>
                   </div>
                 </div>
 

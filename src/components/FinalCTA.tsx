@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Brain, CheckCircle } from 'lucide-react';
 import { CTAButton } from './CTAButton';
+import { WHATSAPP_LINK } from '../data/config';
 
 export const FinalCTA: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ export const FinalCTA: React.FC = () => {
         {/* Primary CTA Button */}
         <div className="pt-4">
           <CTAButton
-            href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20de%20psicoterapia%20online."
+            href={WHATSAPP_LINK}
             variant="primary"
             className="!px-10 !py-5 text-lg shadow-2xl"
           >
