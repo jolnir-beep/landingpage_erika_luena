@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Brain, CheckCircle } from 'lucide-react';
+import { ShieldCheck, Brain, Scale, GraduationCap, CheckCircle } from 'lucide-react';
 import { CTAButton } from './CTAButton';
 import { WHATSAPP_LINK } from '../data/config';
 
@@ -43,7 +43,7 @@ export const FinalCTA: React.FC = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="pt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-white/80 font-medium">
+        <div className="pt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-white/80 font-medium">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-brand-coral" />
             <span>🔒 100% Sigiloso</span>
@@ -51,6 +51,14 @@ export const FinalCTA: React.FC = () => {
           <div className="flex items-center gap-2">
             <Brain className="w-4 h-4 text-brand-teal-light" />
             <span>🧠 TCC Especializada</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Scale className="w-4 h-4 text-brand-teal-light" />
+            <span>⚖️ DBT Especializada</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <GraduationCap className="w-4 h-4 text-brand-coral" />
+            <span>🎓 Supervisão Clínica</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-emerald-400" />
