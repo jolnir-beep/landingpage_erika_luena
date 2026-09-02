@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Sparkles, Video, ArrowRight } from 'lucide-react';
+import { Brain, Sparkles, Video, ArrowRight, Scale, GraduationCap } from 'lucide-react';
 import { SectionBadge } from './SectionBadge';
 import { CTAButton } from './CTAButton';
 import { images } from '../data/images';
@@ -62,8 +62,12 @@ export const Hero: React.FC = () => {
                 <span>TCC Especializada</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-brand-coral" />
-                <span>Transformação Real</span>
+                <Scale className="w-4 h-4 text-brand-teal" />
+                <span>DBT Especializada</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <GraduationCap className="w-4 h-4 text-brand-coral" />
+                <span>Supervisão Especializada</span>
               </div>
             </div>
 
@@ -81,15 +85,15 @@ export const Hero: React.FC = () => {
                 <img
                   src={images.hero}
                   alt="Psicóloga Erica Luena em consultório"
-                  className="w-full h-[420px] sm:h-[480px] object-cover rounded-[1.5rem]"
+                  className="w-full aspect-[772/1024] object-cover rounded-[1.5rem]"
                 />
 
                 {/* Subtle Image Vignette Gradient Overlay at bottom */}
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-brand-dark/20 to-transparent rounded-b-[1.5rem] pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-dark/10 to-transparent rounded-b-[1.5rem] pointer-events-none" />
               </div>
 
-              {/* Floating Card 1: Top-Left */}
-              <div className="absolute -top-4 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-teal/15 flex items-center gap-3 animate-float max-w-[210px] z-10">
+              {/* Floating Card 1: Top-Left - TCC */}
+              <div className="absolute -top-3 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-teal/15 flex items-center gap-3 animate-float max-w-[200px] z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-teal-veryLight text-brand-teal flex items-center justify-center flex-shrink-0">
                   <Brain className="w-5 h-5" />
                 </div>
@@ -99,8 +103,30 @@ export const Hero: React.FC = () => {
                 </div>
               </div>
 
-              {/* Floating Card 2: Bottom-Right */}
-              <div className="absolute -bottom-5 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-coral/20 flex items-center gap-3 animate-float-delayed max-w-[220px] z-10">
+              {/* Floating Card 2: Mid-Right - Supervisão */}
+              <div className="absolute top-1/3 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-coral/20 flex items-center gap-3 animate-float-delayed max-w-[195px] z-10">
+                <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="font-serif font-bold text-sm text-brand-dark block leading-tight">Supervisão</span>
+                  <span className="font-sans text-[11px] text-brand-muted leading-tight block">Clínica & Formação</span>
+                </div>
+              </div>
+
+              {/* Floating Card 3: Lower-Left - DBT */}
+              <div className="absolute bottom-[12%] -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-teal/15 flex items-center gap-3 animate-float-slow max-w-[210px] z-10">
+                <div className="w-10 h-10 rounded-xl bg-brand-teal-veryLight text-brand-teal flex items-center justify-center flex-shrink-0">
+                  <Scale className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="font-serif font-bold text-sm text-brand-dark block leading-tight">DBT</span>
+                  <span className="font-sans text-[11px] text-brand-muted leading-tight block">Terapia Comportamental Dialética</span>
+                </div>
+              </div>
+
+              {/* Floating Card 4: Bottom-Right - Transformação */}
+              <div className="absolute -bottom-4 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-coral/20 flex items-center gap-3 animate-float-reverse-fast max-w-[210px] z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
                   <Sparkles className="w-5 h-5" />
                 </div>
