@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Quick Benefits list */}
-            <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-brand-muted font-medium border-t border-brand-teal/10 w-full">
+            <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-brand-muted font-medium border-t border-brand-teal/15 w-full">
               <div className="flex items-center gap-1.5">
                 <Video className="w-4 h-4 text-brand-teal" />
                 <span>Atendimento Online</span>
@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
               <div className="absolute -inset-3 bg-gradient-to-tr from-brand-teal/10 via-brand-teal-veryLight to-brand-coral-soft rounded-[2.2rem] transform rotate-1 blur-sm -z-10" />
 
               {/* Main Image Container */}
-              <div className="relative bg-white p-3 sm:p-4 rounded-[2rem] shadow-soft-lg border border-brand-teal/10 overflow-hidden">
+              <div className="relative bg-white p-3 sm:p-4 rounded-[2rem] shadow-soft-lg border-2 border-brand-teal/25 overflow-hidden">
                 <img
                   src={images.hero}
                   alt="Psicóloga Erica Luena em consultório"
@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card 1: Top-Left - TCC */}
-              <div className="absolute -top-3 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-teal/15 flex items-center gap-3 animate-float max-w-[200px] z-10">
+              <div className="absolute -top-3 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-teal/30 flex items-center gap-3 animate-float max-w-[200px] z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-teal-veryLight text-brand-teal flex items-center justify-center flex-shrink-0">
                   <Brain className="w-5 h-5" />
                 </div>
@@ -104,7 +104,7 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card 2: Mid-Right - Supervisão */}
-              <div className="absolute top-1/3 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-coral/20 flex items-center gap-3 animate-float-delayed max-w-[195px] z-10">
+              <div className="absolute top-1/3 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-3 animate-float-delayed max-w-[195px] z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
                   <GraduationCap className="w-5 h-5" />
                 </div>
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card 3: Lower-Left - DBT */}
-              <div className="absolute bottom-[12%] -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-teal/15 flex items-center gap-3 animate-float-slow max-w-[210px] z-10">
+              <div className="absolute bottom-[12%] -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-teal/30 flex items-center gap-3 animate-float-slow max-w-[210px] z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-teal-veryLight text-brand-teal flex items-center justify-center flex-shrink-0">
                   <Scale className="w-5 h-5" />
                 </div>
@@ -126,13 +126,13 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card 4: Bottom-Right - Transformação */}
-              <div className="absolute -bottom-4 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border border-brand-coral/20 flex items-center gap-3 animate-float-reverse-fast max-w-[210px] z-10">
+              <div className="absolute -bottom-4 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-3 animate-float-reverse-fast max-w-[210px] z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="font-serif font-bold text-sm text-brand-dark block leading-tight">Transformação</span>
-                  <span className="font-sans text-[11px] text-brand-muted leading-tight block">Mente & Corpo em sintonia</span>
+                  <span className="font-sans text-[11px] text-brand-muted block leading-tight">Mente & Corpo em sintonia</span>
                 </div>
               </div>
 

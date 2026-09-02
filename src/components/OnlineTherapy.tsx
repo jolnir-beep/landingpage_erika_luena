@@ -51,7 +51,7 @@ export const OnlineTherapy: React.FC = () => {
               {benefits.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white p-4 rounded-xl border border-brand-teal/10 shadow-xs flex items-start gap-3 hover:border-brand-teal/30 transition-all duration-200"
+                  className="bg-white p-4 rounded-xl border-2 border-brand-teal/25 shadow-soft-xs flex items-start gap-3 hover:border-brand-teal/45 hover:shadow-soft-sm transition-all duration-200"
                 >
                   <div className="p-2 rounded-lg bg-brand-teal-veryLight flex-shrink-0">
                     {item.icon}
@@ -73,7 +73,7 @@ export const OnlineTherapy: React.FC = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal/20 to-brand-coral/20 rounded-[2.5rem] blur-xl opacity-60 pointer-events-none" />
 
               {/* Main Session Video Call Mockup Container */}
-              <div className="relative bg-white rounded-[2rem] p-6 shadow-soft-lg border border-brand-teal/15 overflow-hidden">
+              <div className="relative bg-white rounded-[2rem] p-6 shadow-soft-lg border-2 border-brand-teal/30 overflow-hidden">
                 
                 {/* Mockup Header Bar */}
                 <div className="flex items-center justify-between border-b border-gray-100 pb-4 mb-5">
@@ -118,17 +118,17 @@ export const OnlineTherapy: React.FC = () => {
 
                 {/* Mockup Bottom Stats Strip */}
                 <div className="mt-6 pt-4 border-t border-gray-100 grid grid-cols-3 gap-2 text-center">
-                  <div className="bg-brand-bg-alt p-3 rounded-xl">
+                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-3 rounded-xl">
                     <span className="font-serif font-bold text-lg text-brand-teal block">500+</span>
                     <span className="font-sans text-[11px] text-brand-muted block">Sessões Online</span>
                   </div>
 
-                  <div className="bg-brand-bg-alt p-3 rounded-xl">
+                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-3 rounded-xl">
                     <span className="font-serif font-bold text-lg text-brand-teal block">98%</span>
                     <span className="font-sans text-[11px] text-brand-muted block">Satisfação</span>
                   </div>
 
-                  <div className="bg-brand-bg-alt p-3 rounded-xl">
+                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-3 rounded-xl">
                     <div className="flex items-center justify-center gap-0.5 text-amber-400">
                       <Star className="w-4 h-4 fill-amber-400" />
                       <span className="font-serif font-bold text-lg text-brand-dark ml-0.5">5.0</span>

@@ -49,7 +49,7 @@ export const Testimonials: React.FC = () => {
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
           {/* Main Card */}
-          <div className="bg-white rounded-[2.2rem] p-8 sm:p-12 border border-brand-teal/10 shadow-soft-lg relative transition-all duration-500 overflow-hidden">
+          <div className="bg-white rounded-[2.2rem] p-8 sm:p-12 border-2 border-brand-teal/25 shadow-soft-lg relative transition-all duration-500 overflow-hidden">
             
             {/* Decorative Quote Icon in background */}
             <Quote className="absolute top-6 right-8 w-24 h-24 text-brand-teal-veryLight/80 pointer-events-none -rotate-12" />
@@ -109,7 +109,7 @@ export const Testimonials: React.FC = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={prevSlide}
-                className="w-11 h-11 rounded-full bg-white border border-brand-teal/20 text-brand-dark hover:text-brand-coral hover:border-brand-coral flex items-center justify-center transition-all shadow-sm active:scale-95"
+                className="w-11 h-11 rounded-full bg-white border-2 border-brand-teal/25 text-brand-dark hover:text-brand-coral hover:border-brand-coral flex items-center justify-center transition-all shadow-sm active:scale-95"
                 aria-label="Depoimento anterior"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -117,7 +117,7 @@ export const Testimonials: React.FC = () => {
 
               <button
                 onClick={nextSlide}
-                className="w-11 h-11 rounded-full bg-white border border-brand-teal/20 text-brand-dark hover:text-brand-coral hover:border-brand-coral flex items-center justify-center transition-all shadow-sm active:scale-95"
+                className="w-11 h-11 rounded-full bg-white border-2 border-brand-teal/25 text-brand-dark hover:text-brand-coral hover:border-brand-coral flex items-center justify-center transition-all shadow-sm active:scale-95"
                 aria-label="Próximo depoimento"
               >
                 <ChevronRight className="w-5 h-5" />

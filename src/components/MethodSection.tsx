@@ -122,7 +122,7 @@ export const MethodSection: React.FC = () => {
       steps: methodSteps.map(s => ({ ...s, icon: getTccIcon(s.iconName) })),
       accentClass: 'text-brand-teal',
       stepBg: 'bg-brand-teal-veryLight/70 hover:bg-brand-teal-veryLight',
-      stepBorder: 'border-brand-teal/15 hover:border-brand-teal/30',
+      stepBorder: 'border-brand-teal/35 hover:border-brand-teal/60',
     },
     dbt: {
       badge: '⚖️ O Método DBT',
@@ -132,7 +132,7 @@ export const MethodSection: React.FC = () => {
       steps: dbtSteps,
       accentClass: 'text-brand-teal',
       stepBg: 'bg-brand-teal-veryLight/70 hover:bg-brand-teal-veryLight',
-      stepBorder: 'border-brand-teal/15 hover:border-brand-teal/30',
+      stepBorder: 'border-brand-teal/35 hover:border-brand-teal/60',
     },
     supervisao: {
       badge: '🎓 Supervisão Clínica',
@@ -142,7 +142,7 @@ export const MethodSection: React.FC = () => {
       steps: supervisaoSteps,
       accentClass: 'text-brand-coral',
       stepBg: 'bg-brand-coral-soft/60 hover:bg-brand-coral-soft',
-      stepBorder: 'border-brand-coral/15 hover:border-brand-coral/30',
+      stepBorder: 'border-brand-coral/35 hover:border-brand-coral/60',
     },
   };
 
@@ -166,7 +166,7 @@ export const MethodSection: React.FC = () => {
                     ? isCoral
                       ? 'border-brand-coral bg-gradient-to-b from-brand-coral-soft to-white shadow-coral-glow scale-[1.03]'
                       : 'border-brand-teal bg-gradient-to-b from-brand-teal-veryLight to-white shadow-teal-glow scale-[1.03]'
-                    : 'border-transparent bg-white hover:border-brand-teal/20 hover:shadow-soft-md hover:-translate-y-1'
+                    : 'border-brand-teal/30 bg-white shadow-soft-sm hover:border-brand-teal/50 hover:shadow-soft-md hover:-translate-y-1'
                 }`}
               >
                 {/* Animated background shimmer on hover */}
@@ -247,7 +247,7 @@ export const MethodSection: React.FC = () => {
           {c.steps.map((step, index) => (
             <div
               key={`${active}-step-${index}`}
-              className={`${c.stepBg} p-7 rounded-2xl border ${c.stepBorder} transition-all duration-300 flex flex-col text-left relative group shadow-sm hover:shadow-soft-md`}
+              className={`${c.stepBg} p-7 rounded-2xl border-2 ${c.stepBorder} transition-all duration-300 flex flex-col text-left relative group shadow-sm hover:shadow-soft-md`}
             >
               {/* Step number + icon */}
               <div className="flex items-center justify-between mb-6">

@@ -34,10 +34,10 @@ export const FAQ: React.FC = () => {
             return (
               <div
                 key={item.id}
-                className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${
+                className={`bg-white rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? 'border-brand-teal/40 shadow-soft-md'
-                    : 'border-brand-teal/10 shadow-xs hover:border-brand-teal/25'
+                    ? 'border-brand-teal shadow-soft-md'
+                    : 'border-brand-teal/30 shadow-soft-xs hover:border-brand-teal/50 hover:shadow-soft-sm'
                 }`}
               >
                 <button
@@ -64,7 +64,7 @@ export const FAQ: React.FC = () => {
                 {isOpen && (
                   <div
                     id={`faq-answer-${item.id}`}
-                    className="px-6 pb-6 pt-1 border-t border-brand-teal/5 font-sans text-sm sm:text-base text-brand-muted leading-relaxed text-left animate-fadeIn"
+                    className="px-6 pb-6 pt-1 border-t border-brand-teal/15 font-sans text-sm sm:text-base text-brand-muted leading-relaxed text-left animate-fadeIn"
                   >
                     {item.answer}
                   </div>

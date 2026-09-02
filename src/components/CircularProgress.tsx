@@ -20,7 +20,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="flex flex-col items-center text-center group p-6 rounded-2xl bg-white border border-brand-teal/10 shadow-soft-md hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300">
+    <div className="flex flex-col items-center text-center group p-6 rounded-2xl bg-white border-2 border-brand-teal/25 shadow-soft-md hover:shadow-soft-lg hover:border-brand-teal/45 hover:-translate-y-1 transition-all duration-300">
       <div className="relative flex items-center justify-center my-2" style={{ width: size, height: size }}>
         <svg className="transform -rotate-90 w-full h-full">
           {/* Background circle */}

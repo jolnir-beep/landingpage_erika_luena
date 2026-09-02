@@ -52,7 +52,7 @@ export const AboutSection: React.FC = () => {
               <div className="absolute -bottom-4 -left-4 w-full h-full bg-brand-teal-veryLight rounded-[2.5rem] border border-brand-teal/20 -z-10 transform -rotate-2" />
 
               {/* Photo Frame Container */}
-              <div className="bg-white p-3 rounded-[2.2rem] shadow-soft-lg border border-brand-teal/10 overflow-hidden">
+              <div className="bg-white p-3 rounded-[2.2rem] shadow-soft-lg border-2 border-brand-teal/25 overflow-hidden">
                 <img
                   src={images.about}
                   alt="Psicóloga Clínica Erica Luena"
@@ -61,7 +61,7 @@ export const AboutSection: React.FC = () => {
               </div>
 
               {/* Floating Badge Overlay */}
-              <div className="absolute -bottom-6 -right-4 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-soft-md border border-brand-coral/20 flex items-center gap-3">
+              <div className="absolute -bottom-6 -right-4 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
                   <Award className="w-5 h-5" />
                 </div>
@@ -102,10 +102,10 @@ export const AboutSection: React.FC = () => {
               {approaches.map((a, i) => (
                 <div
                   key={i}
-                  className={`group flex flex-col gap-2 p-4 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-md ${
+                  className={`group flex flex-col gap-2 p-4 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-md ${
                     a.color === 'coral'
-                      ? 'bg-brand-coral-soft/50 border-brand-coral/15 hover:border-brand-coral/30'
-                      : 'bg-brand-teal-veryLight/70 border-brand-teal/15 hover:border-brand-teal/30'
+                      ? 'bg-brand-coral-soft/70 border-brand-coral/35 hover:border-brand-coral/55'
+                      : 'bg-brand-teal-veryLight/80 border-brand-teal/35 hover:border-brand-teal/55'
                   }`}
                 >
                   <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
