@@ -1,18 +1,43 @@
 import React from 'react';
-import { Award, CheckCircle2 } from 'lucide-react';
+import { Award, CheckCircle2, Brain, Scale, GraduationCap } from 'lucide-react';
 import { SectionBadge } from './SectionBadge';
 import { CTAButton } from './CTAButton';
 import { images } from '../data/images';
 import { WHATSAPP_LINK } from '../data/config';
 
-export const AboutSection: React.FC = () => {
-  const pillars = [
-    "Escuta empática, humanizada e 100% livre de julgamentos",
-    "Terapia Cognitivo-Comportamental (TCC) fundamentada em evidências",
-    "Foco na raiz emocional do comportamento alimentar e da ansiedade",
-    "Desenvolvimento de autonomia e regulação emocional duradoura"
-  ];
+const approaches = [
+  {
+    icon: <Brain className="w-5 h-5" />,
+    label: 'TCC',
+    full: 'Terapia Cognitivo-Comportamental',
+    description: 'Identifico e transformo pensamentos disfuncionais que alimentam a ansiedade, a culpa e o comportamento compulsivo.',
+    color: 'teal' as const,
+  },
+  {
+    icon: <Scale className="w-5 h-5" />,
+    label: 'DBT',
+    full: 'Terapia Comportamental Dialética',
+    description: 'Desenvolvo habilidades de regulação emocional, tolerância ao mal-estar e efetividade interpessoal para uma vida mais equilibrada.',
+    color: 'teal' as const,
+  },
+  {
+    icon: <GraduationCap className="w-5 h-5" />,
+    label: 'Supervisão',
+    full: 'Para profissionais da saúde mental',
+    description: 'Ofereço supervisão clínica individual com base em TCC e DBT, apoiando psicólogos no desenvolvimento da identidade e competência clínica.',
+    color: 'coral' as const,
+  },
+];
 
+const pillars = [
+  "Escuta empática, humanizada e 100% livre de julgamentos",
+  "TCC & DBT fundamentadas em evidências científicas",
+  "Foco na raiz emocional do comportamento alimentar e da ansiedade",
+  "Desenvolvimento de autonomia e regulação emocional duradoura",
+  "Supervisão clínica para psicólogos em formação e carreira",
+];
+
+export const AboutSection: React.FC = () => {
   return (
     <section id="sobre" className="py-16 md:py-24 bg-brand-bg relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,12 +90,50 @@ export const AboutSection: React.FC = () => {
                 Ao longo dos anos de prática clínica, percebi que a grande maioria das pessoas que lutam contra o efeito sanfona ou compulsões alimentares não precisa de mais uma dieta restritiva — precisa cuidar da mente.
               </p>
               <p>
-                Através da Terapia Cognitivo-Comportamental (TCC), ofereço um acompanhamento estruturado, acolhedor e altamente prático, onde você aprenderá a reconhecer seus pensamentos, dominar seus impulsos e viver com leveza.
+                Trabalho com <strong className="text-brand-dark font-semibold">TCC</strong> para identificar e transformar os padrões de pensamento que alimentam a ansiedade e os impulsos, e com <strong className="text-brand-dark font-semibold">DBT</strong> para desenvolver habilidades práticas de regulação emocional, tornando a mudança de comportamento possível e duradoura.
+              </p>
+              <p>
+                Também ofereço <strong className="text-brand-dark font-semibold">supervisão clínica</strong> para psicólogos que desejam aprofundar sua prática em TCC e DBT, crescer com segurança e desenvolver uma identidade clínica sólida.
               </p>
             </div>
 
+            {/* Approach Cards — TCC, DBT, Supervisão */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 w-full">
+              {approaches.map((a, i) => (
+                <div
+                  key={i}
+                  className={`group flex flex-col gap-2 p-4 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-md ${
+                    a.color === 'coral'
+                      ? 'bg-brand-coral-soft/50 border-brand-coral/15 hover:border-brand-coral/30'
+                      : 'bg-brand-teal-veryLight/70 border-brand-teal/15 hover:border-brand-teal/30'
+                  }`}
+                >
+                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    a.color === 'coral'
+                      ? 'bg-brand-coral-soft text-brand-coral'
+                      : 'bg-white text-brand-teal'
+                  }`}>
+                    {a.icon}
+                  </div>
+                  <div>
+                    <span className={`font-serif font-bold text-sm block leading-tight ${
+                      a.color === 'coral' ? 'text-brand-coral' : 'text-brand-teal'
+                    }`}>
+                      {a.label}
+                    </span>
+                    <span className="font-sans text-[10px] text-brand-muted block leading-tight mb-1">
+                      {a.full}
+                    </span>
+                    <p className="font-sans text-[11px] text-brand-muted leading-relaxed">
+                      {a.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
             {/* Pillars Check list */}
-            <div className="space-y-3 pt-2 w-full">
+            <div className="space-y-2.5 pt-1 w-full border-t border-brand-teal/10 pt-4">
               {pillars.map((pillar, index) => (
                 <div key={index} className="flex items-start gap-3 text-sm font-medium text-brand-dark">
                   <CheckCircle2 className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" />
@@ -79,7 +142,7 @@ export const AboutSection: React.FC = () => {
               ))}
             </div>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <CTAButton href={WHATSAPP_LINK} variant="primary">
                 Agendar Sessão com Erica 👇
               </CTAButton>
