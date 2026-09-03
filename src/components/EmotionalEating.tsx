@@ -10,7 +10,7 @@ interface EmotionalCardProps {
 }
 
 const EmotionalCard: React.FC<EmotionalCardProps> = ({ icon, title, description }) => (
-  <div className="bg-white p-6 sm:p-7 rounded-2xl border border-brand-teal/10 shadow-soft-md hover:shadow-soft-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-start text-left group">
+  <div className="bg-white p-6 sm:p-7 rounded-2xl border-2 border-brand-teal/25 shadow-soft-md hover:shadow-soft-lg hover:border-brand-teal/50 hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-start text-left group">
     <div className="w-12 h-12 rounded-xl bg-brand-teal-veryLight text-brand-teal group-hover:bg-brand-coral-soft group-hover:text-brand-coral flex items-center justify-center mb-5 transition-colors duration-300">
       {icon}
     </div>
@@ -87,7 +87,7 @@ export const EmotionalEating: React.FC = () => {
         </div>
 
         {/* Literature & Specialization Showcase Banner */}
-        <div className="mt-14 bg-white rounded-3xl p-6 sm:p-8 border border-brand-teal/15 shadow-soft-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="mt-14 bg-white rounded-3xl p-6 sm:p-8 border-2 border-brand-teal/30 shadow-soft-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4 text-left">
             <span className="text-xs font-semibold uppercase tracking-wider text-brand-teal bg-brand-teal-veryLight px-3 py-1 rounded-full inline-block">
               📚 Embasamento Científico & Prático
@@ -101,7 +101,7 @@ export const EmotionalEating: React.FC = () => {
           </div>
           
           <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div className="relative group overflow-hidden rounded-2xl border border-brand-teal/10 shadow-soft-md">
+            <div className="relative group overflow-hidden rounded-2xl border-2 border-brand-teal/25 shadow-soft-md">
               <img
                 src={images.comportamentoAlimentar}
                 alt="Erica Luena estudando Ciência do Comportamento Alimentar"
@@ -111,7 +111,7 @@ export const EmotionalEating: React.FC = () => {
                 <span className="text-[11px] font-medium text-white block truncate">Comportamento Alimentar</span>
               </div>
             </div>
-            <div className="relative group overflow-hidden rounded-2xl border border-brand-teal/10 shadow-soft-md">
+            <div className="relative group overflow-hidden rounded-2xl border-2 border-brand-teal/25 shadow-soft-md">
               <img
                 src={images.armadilhasDieta}
                 alt="Erica Luena com o livro Armadilhas da Dieta"

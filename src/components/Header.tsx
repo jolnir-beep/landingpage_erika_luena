@@ -38,8 +38,8 @@ export const Header: React.FC = () => {
     <header
       className={`sticky top-0 z-50 w-full h-[76px] transition-all duration-300 ${
         isScrolled
-          ? 'bg-brand-bg/95 backdrop-blur-md border-b border-brand-teal/10 shadow-soft-sm'
-          : 'bg-brand-bg/80 backdrop-blur-sm border-b border-transparent'
+          ? 'bg-brand-bg/95 backdrop-blur-md border-b border-brand-teal/20 shadow-soft-sm'
+          : 'bg-brand-bg/90 backdrop-blur-sm border-b border-brand-teal/15'
       }`}
     >
       <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
