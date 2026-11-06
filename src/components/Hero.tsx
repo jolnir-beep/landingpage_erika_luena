@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
                 <span>TCC Especializada</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Scale className="w-4 h-4 text-brand-teal" />
+                <Scale className="w-4 h-4 text-sky-600" />
                 <span>DBT Especializada</span>
               </div>
               <div className="flex items-center gap-1.5">
@@ -115,12 +115,12 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card 3: Lower-Left - DBT */}
-              <div className="absolute bottom-[12%] -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-teal/30 flex items-center gap-3 animate-float-slow max-w-[210px] z-10">
-                <div className="w-10 h-10 rounded-xl bg-brand-teal-veryLight text-brand-teal flex items-center justify-center flex-shrink-0">
+              <div className="absolute bottom-[12%] -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-sky-300/80 flex items-center gap-3 animate-float-slow max-w-[210px] z-10">
+                <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
                   <Scale className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-serif font-bold text-sm text-brand-dark block leading-tight">DBT</span>
+                  <span className="font-serif font-bold text-sm text-sky-700 block leading-tight">DBT</span>
                   <span className="font-sans text-[11px] text-brand-muted leading-tight block">Terapia Comportamental Dialética</span>
                 </div>
               </div>

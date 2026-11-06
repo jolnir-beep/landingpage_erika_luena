@@ -22,6 +22,13 @@ export default {
           light: '#EA7668',
           hover: '#D96254',
           soft: '#F4CEC7'
+        },
+        'brand-blue': {
+          DEFAULT: '#2E6F9E',
+          light: '#4388B8',
+          dark: '#1B4968',
+          soft: '#D2E4F0',
+          hover: '#245B82'
         }
       },
       fontFamily: {
@@ -35,6 +42,7 @@ export default {
         'soft-lg': '0 14px 36px rgba(24, 36, 42, 0.09), 0 4px 12px rgba(24, 36, 42, 0.05)',
         'coral-glow': '0 8px 25px rgba(233, 117, 103, 0.35)',
         'teal-glow': '0 8px 25px rgba(57, 123, 119, 0.25)',
+        'blue-glow': '0 8px 25px rgba(46, 111, 158, 0.30)',
       },
       borderRadius: {
         'xl2': '1.25rem',

@@ -18,7 +18,7 @@ const approaches = [
     label: 'DBT',
     full: 'Terapia Comportamental Dialética',
     description: 'Desenvolvo habilidades de regulação emocional, tolerância ao mal-estar e efetividade interpessoal para uma vida mais equilibrada.',
-    color: 'teal' as const,
+    color: 'blue' as const,
   },
   {
     icon: <GraduationCap className="w-5 h-5" />,
@@ -90,46 +90,56 @@ export const AboutSection: React.FC = () => {
                 Ao longo dos anos de prática clínica, percebi que a grande maioria das pessoas que lutam contra o efeito sanfona ou compulsões alimentares não precisa de mais uma dieta restritiva — precisa cuidar da mente.
               </p>
               <p>
-                Trabalho com <strong className="text-brand-dark font-semibold">TCC</strong> para identificar e transformar os padrões de pensamento que alimentam a ansiedade e os impulsos, e com <strong className="text-brand-dark font-semibold">DBT</strong> para desenvolver habilidades práticas de regulação emocional, tornando a mudança de comportamento possível e duradoura.
+                Trabalho com <strong className="text-brand-teal font-semibold">TCC</strong> para identificar e transformar os padrões de pensamento que alimentam a ansiedade e os impulsos, e com <strong className="text-sky-700 font-semibold">DBT</strong> para desenvolver habilidades práticas de regulação emocional, tornando a mudança de comportamento possível e duradoura.
               </p>
               <p>
-                Também ofereço <strong className="text-brand-dark font-semibold">supervisão clínica</strong> para psicólogos que desejam aprofundar sua prática em TCC e DBT, crescer com segurança e desenvolver uma identidade clínica sólida.
+                Também ofereço <strong className="text-brand-coral font-semibold">supervisão clínica</strong> para psicólogos que desejam aprofundar sua prática em TCC e DBT, crescer com segurança e desenvolver uma identidade clínica sólida.
               </p>
             </div>
 
             {/* Approach Cards — TCC, DBT, Supervisão */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 w-full">
-              {approaches.map((a, i) => (
-                <div
-                  key={i}
-                  className={`group flex flex-col gap-2 p-4 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-md ${
-                    a.color === 'coral'
-                      ? 'bg-brand-coral-soft/70 border-brand-coral/35 hover:border-brand-coral/55'
-                      : 'bg-brand-teal-veryLight/80 border-brand-teal/35 hover:border-brand-teal/55'
-                  }`}
-                >
-                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                    a.color === 'coral'
-                      ? 'bg-brand-coral-soft text-brand-coral'
-                      : 'bg-white text-brand-teal'
-                  }`}>
-                    {a.icon}
+              {approaches.map((a, i) => {
+                const styles = {
+                  teal: {
+                    card: 'bg-brand-teal-veryLight/80 border-brand-teal/35 hover:border-brand-teal/55',
+                    iconBg: 'bg-white text-brand-teal',
+                    title: 'text-brand-teal',
+                  },
+                  blue: {
+                    card: 'bg-sky-50/90 border-sky-300/80 hover:border-sky-400',
+                    iconBg: 'bg-white text-sky-600',
+                    title: 'text-sky-700',
+                  },
+                  coral: {
+                    card: 'bg-brand-coral-soft/70 border-brand-coral/35 hover:border-brand-coral/55',
+                    iconBg: 'bg-white text-brand-coral',
+                    title: 'text-brand-coral',
+                  },
+                }[a.color];
+
+                return (
+                  <div
+                    key={i}
+                    className={`group flex flex-col gap-2 p-4 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft-md ${styles.card}`}
+                  >
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 shadow-xs ${styles.iconBg}`}>
+                      {a.icon}
+                    </div>
+                    <div>
+                      <span className={`font-serif font-bold text-sm block leading-tight ${styles.title}`}>
+                        {a.label}
+                      </span>
+                      <span className="font-sans text-[10px] text-brand-muted block leading-tight mb-1">
+                        {a.full}
+                      </span>
+                      <p className="font-sans text-[11px] text-brand-muted leading-relaxed">
+                        {a.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <span className={`font-serif font-bold text-sm block leading-tight ${
-                      a.color === 'coral' ? 'text-brand-coral' : 'text-brand-teal'
-                    }`}>
-                      {a.label}
-                    </span>
-                    <span className="font-sans text-[10px] text-brand-muted block leading-tight mb-1">
-                      {a.full}
-                    </span>
-                    <p className="font-sans text-[11px] text-brand-muted leading-relaxed">
-                      {a.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Pillars Check list */}

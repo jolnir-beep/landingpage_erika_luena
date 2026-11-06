@@ -3,7 +3,7 @@ import React from 'react';
 interface SectionBadgeProps {
   text: string;
   icon?: string | React.ReactNode;
-  variant?: 'green' | 'coral' | 'teal';
+  variant?: 'green' | 'coral' | 'teal' | 'blue';
   className?: string;
 }
 
@@ -17,6 +17,8 @@ export const SectionBadge: React.FC<SectionBadgeProps> = ({
 
   if (variant === 'coral') {
     styleClasses = 'bg-brand-coral-soft text-brand-coral border-brand-coral/20';
+  } else if (variant === 'blue') {
+    styleClasses = 'bg-sky-100 text-sky-800 border-sky-300 shadow-xs';
   } else if (variant === 'teal') {
     styleClasses = 'bg-brand-teal/10 text-brand-teal-dark border-brand-teal/30';
   }

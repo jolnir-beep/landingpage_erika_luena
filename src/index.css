@@ -123,3 +123,26 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #397B77;
 }
+
+/* Explicit fallback utilities for DBT blue */
+.text-brand-blue {
+  color: #0284c7 !important;
+}
+.text-brand-blue-light {
+  color: #38bdf8 !important;
+}
+.bg-brand-blue {
+  background-color: #0284c7 !important;
+}
+.bg-brand-blue-soft {
+  background-color: #e0f2fe !important;
+}
+.border-brand-blue {
+  border-color: #0284c7 !important;
+}
+.stroke-brand-blue {
+  stroke: #0284c7 !important;
+}
+.stroke-brand-blue-soft {
+  stroke: #e0f2fe !important;
+}
