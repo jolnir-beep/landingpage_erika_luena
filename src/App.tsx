@@ -4,6 +4,7 @@ import { EmotionalEating } from './components/EmotionalEating';
 import { MethodSection } from './components/MethodSection';
 import { OnlineTherapy } from './components/OnlineTherapy';
 import { AboutSection } from './components/AboutSection';
+import { PodcastSection } from './components/PodcastSection';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
@@ -24,6 +25,7 @@ export function App() {
         <MethodSection />
         <OnlineTherapy />
         <AboutSection />
+        <PodcastSection />
         <Testimonials />
         <FAQ />
         <FinalCTA />
