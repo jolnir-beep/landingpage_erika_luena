@@ -76,7 +76,7 @@ const tabs = [
     subtitle: 'Terapia Comportamental Dialética',
     emoji: '⚖️',
     badge: '⚖️ O Método DBT',
-    color: 'teal' as const,
+    color: 'blue' as const,
   },
   {
     key: 'supervisao',
@@ -89,6 +89,36 @@ const tabs = [
 ] as const;
 
 type TabKey = typeof tabs[number]['key'];
+
+const tabTheme = {
+  teal: {
+    activeBorder: 'border-brand-teal bg-gradient-to-b from-brand-teal-veryLight to-white shadow-teal-glow scale-[1.03]',
+    inactiveBorder: 'border-brand-teal/30 hover:border-brand-teal/50 hover:shadow-soft-md',
+    shimmer: 'bg-gradient-to-br from-brand-teal-veryLight/60 via-transparent to-transparent',
+    activeText: 'text-brand-teal',
+    inactiveHoverText: 'group-hover:text-brand-teal',
+    indicator: 'bg-brand-teal',
+    pulseDot: 'bg-brand-teal/40',
+  },
+  blue: {
+    activeBorder: 'border-sky-500 bg-gradient-to-b from-sky-100 via-sky-50/60 to-white shadow-[0_8px_25px_rgba(2,132,199,0.30)] scale-[1.03]',
+    inactiveBorder: 'border-sky-300/60 hover:border-sky-400 hover:shadow-soft-md',
+    shimmer: 'bg-gradient-to-br from-sky-100/70 via-transparent to-transparent',
+    activeText: 'text-sky-700',
+    inactiveHoverText: 'group-hover:text-sky-600',
+    indicator: 'bg-sky-600',
+    pulseDot: 'bg-sky-500/50',
+  },
+  coral: {
+    activeBorder: 'border-brand-coral bg-gradient-to-b from-brand-coral-soft to-white shadow-coral-glow scale-[1.03]',
+    inactiveBorder: 'border-brand-coral/30 hover:border-brand-coral/50 hover:shadow-soft-md',
+    shimmer: 'bg-gradient-to-br from-brand-coral-soft/40 via-transparent to-transparent',
+    activeText: 'text-brand-coral',
+    inactiveHoverText: 'group-hover:text-brand-coral',
+    indicator: 'bg-brand-coral',
+    pulseDot: 'bg-brand-coral/40',
+  },
+};
 
 export const MethodSection: React.FC = () => {
   const [active, setActive] = useState<TabKey>('tcc');
@@ -110,9 +140,11 @@ export const MethodSection: React.FC = () => {
     intro: string;
     metrics: typeof dbtMetrics;
     steps: { number: string; icon: React.ReactNode; title: string; description: string }[];
-    accentClass: string;
+    titleHover: string;
     stepBg: string;
     stepBorder: string;
+    numberBg: string;
+    iconColor: string;
   }> = {
     tcc: {
       badge: '🛠️ O Método TCC',
@@ -120,19 +152,23 @@ export const MethodSection: React.FC = () => {
       intro: 'A Terapia Cognitivo-Comportamental (TCC) é a abordagem psicológica mais recomendada mundialmente pela comunidade científica para o tratamento da ansiedade e reeducação comportamental.',
       metrics: methodMetrics,
       steps: methodSteps.map(s => ({ ...s, icon: getTccIcon(s.iconName) })),
-      accentClass: 'text-brand-teal',
+      titleHover: 'group-hover:text-brand-teal',
       stepBg: 'bg-brand-teal-veryLight/70 hover:bg-brand-teal-veryLight',
       stepBorder: 'border-brand-teal/35 hover:border-brand-teal/60',
+      numberBg: 'bg-brand-teal',
+      iconColor: 'text-brand-teal',
     },
     dbt: {
       badge: '⚖️ O Método DBT',
-      headline: <>Habilidades para uma <span className="text-brand-teal">Vida que Vale a Pena</span></>,
+      headline: <>Habilidades para uma <span className="text-sky-600">Vida que Vale a Pena</span></>,
       intro: 'A Terapia Comportamental Dialética (DBT) é uma abordagem baseada em evidências que une estratégias cognitivo-comportamentais com práticas de mindfulness, ajudando a regular emoções intensas e construir uma vida mais equilibrada.',
       metrics: dbtMetrics,
       steps: dbtSteps,
-      accentClass: 'text-brand-teal',
-      stepBg: 'bg-brand-teal-veryLight/70 hover:bg-brand-teal-veryLight',
-      stepBorder: 'border-brand-teal/35 hover:border-brand-teal/60',
+      titleHover: 'group-hover:text-sky-600',
+      stepBg: 'bg-sky-50/90 hover:bg-sky-100/80',
+      stepBorder: 'border-sky-300 hover:border-sky-400',
+      numberBg: 'bg-sky-600',
+      iconColor: 'text-sky-600',
     },
     supervisao: {
       badge: '🎓 Supervisão Clínica',
@@ -140,9 +176,11 @@ export const MethodSection: React.FC = () => {
       intro: 'A supervisão clínica é um espaço privilegiado para o desenvolvimento do psicólogo. Ofereço supervisão individual com foco em TCC e DBT, auxiliando profissionais a aprimorarem suas habilidades terapêuticas e fortalecerem sua identidade clínica.',
       metrics: supervisaoMetrics,
       steps: supervisaoSteps,
-      accentClass: 'text-brand-coral',
+      titleHover: 'group-hover:text-brand-coral',
       stepBg: 'bg-brand-coral-soft/60 hover:bg-brand-coral-soft',
       stepBorder: 'border-brand-coral/35 hover:border-brand-coral/60',
+      numberBg: 'bg-brand-coral',
+      iconColor: 'text-brand-coral',
     },
   };
 
@@ -156,25 +194,19 @@ export const MethodSection: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-14">
           {tabs.map((tab) => {
             const isActive = active === tab.key;
-            const isCoral = tab.key === 'supervisao';
+            const theme = tabTheme[tab.color];
             return (
               <button
                 key={tab.key}
                 onClick={() => setActive(tab.key)}
                 className={`group relative flex flex-col items-center text-center gap-3 px-6 py-7 rounded-2xl border-2 transition-all duration-300 cursor-pointer overflow-hidden ${
                   isActive
-                    ? isCoral
-                      ? 'border-brand-coral bg-gradient-to-b from-brand-coral-soft to-white shadow-coral-glow scale-[1.03]'
-                      : 'border-brand-teal bg-gradient-to-b from-brand-teal-veryLight to-white shadow-teal-glow scale-[1.03]'
-                    : 'border-brand-teal/30 bg-white shadow-soft-sm hover:border-brand-teal/50 hover:shadow-soft-md hover:-translate-y-1'
+                    ? theme.activeBorder
+                    : `bg-white shadow-soft-sm hover:-translate-y-1 ${theme.inactiveBorder}`
                 }`}
               >
                 {/* Animated background shimmer on hover */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-                  isCoral
-                    ? 'bg-gradient-to-br from-brand-coral-soft/40 via-transparent to-transparent'
-                    : 'bg-gradient-to-br from-brand-teal-veryLight/60 via-transparent to-transparent'
-                } pointer-events-none`} />
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${theme.shimmer} pointer-events-none`} />
 
                 {/* Emoji icon */}
                 <span className={`text-4xl transition-transform duration-300 ${
@@ -185,9 +217,7 @@ export const MethodSection: React.FC = () => {
 
                 {/* Label */}
                 <span className={`font-serif text-2xl font-bold transition-colors duration-200 ${
-                  isActive
-                    ? isCoral ? 'text-brand-coral' : 'text-brand-teal'
-                    : 'text-brand-dark group-hover:text-brand-teal'
+                  isActive ? theme.activeText : `text-brand-dark ${theme.inactiveHoverText}`
                 }`}>
                   {tab.label}
                 </span>
@@ -201,16 +231,12 @@ export const MethodSection: React.FC = () => {
 
                 {/* Active indicator bar */}
                 <span className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl transition-all duration-300 ${
-                  isActive
-                    ? isCoral ? 'bg-brand-coral opacity-100' : 'bg-brand-teal opacity-100'
-                    : 'opacity-0'
+                  isActive ? `${theme.indicator} opacity-100` : 'opacity-0'
                 }`} />
 
                 {/* Inactive hint — pulsing dot */}
                 {!isActive && (
-                  <span className={`absolute bottom-3 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full animate-pulse ${
-                    isCoral ? 'bg-brand-coral/40' : 'bg-brand-teal/40'
-                  }`} />
+                  <span className={`absolute bottom-3 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full animate-pulse ${theme.pulseDot}`} />
                 )}
               </button>
             );
@@ -219,7 +245,10 @@ export const MethodSection: React.FC = () => {
 
         {/* ── Section Header (animated key change) ── */}
         <div key={active} className="text-center max-w-3xl mx-auto space-y-4 mb-16 animate-tab-content">
-          <SectionBadge text={c.badge} variant={active === 'supervisao' ? 'coral' : 'green'} />
+          <SectionBadge
+            text={c.badge}
+            variant={active === 'supervisao' ? 'coral' : active === 'dbt' ? 'blue' : 'green'}
+          />
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark tracking-tight leading-tight">
             {c.headline}
@@ -238,6 +267,7 @@ export const MethodSection: React.FC = () => {
               percentage={item.percentage}
               label={item.label}
               sublabel={item.sublabel}
+              variant={active === 'dbt' ? 'blue' : active === 'supervisao' ? 'coral' : 'teal'}
             />
           ))}
         </div>
@@ -251,15 +281,15 @@ export const MethodSection: React.FC = () => {
             >
               {/* Step number + icon */}
               <div className="flex items-center justify-between mb-6">
-                <span className={`w-10 h-10 rounded-full ${active === 'supervisao' ? 'bg-brand-coral' : 'bg-brand-teal'} text-white font-serif font-bold text-base flex items-center justify-center shadow-sm`}>
+                <span className={`w-10 h-10 rounded-full ${c.numberBg} text-white font-serif font-bold text-base flex items-center justify-center shadow-sm`}>
                   {step.number}
                 </span>
-                <div className={`w-9 h-9 rounded-xl bg-white ${active === 'supervisao' ? 'text-brand-coral' : 'text-brand-teal'} flex items-center justify-center shadow-xs`}>
+                <div className={`w-9 h-9 rounded-xl bg-white ${c.iconColor} flex items-center justify-center shadow-xs`}>
                   {step.icon}
                 </div>
               </div>
 
-              <h3 className={`font-serif text-xl font-bold text-brand-dark mb-3 group-hover:${c.accentClass} transition-colors`}>
+              <h3 className={`font-serif text-xl font-bold text-brand-dark mb-3 ${c.titleHover} transition-colors`}>
                 {step.title}
               </h3>
 

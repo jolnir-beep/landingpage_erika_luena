@@ -53,7 +53,7 @@ export const FinalCTA: React.FC = () => {
             <span>🧠 TCC Especializada</span>
           </div>
           <div className="flex items-center gap-2">
-            <Scale className="w-4 h-4 text-brand-teal-light" />
+            <Scale className="w-4 h-4 text-sky-300" />
             <span>⚖️ DBT Especializada</span>
           </div>
           <div className="flex items-center gap-2">
