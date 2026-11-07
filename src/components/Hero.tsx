@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
             <SectionBadge text="Psicóloga Clínica 🦋" variant="green" />
 
             {/* Main Headline */}
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark leading-[1.08]">
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark leading-[1.08]">
               <span className="text-brand-teal block mb-1">EMAGRECER</span>
               <span className="block">
                 COMEÇA NA <span className="text-brand-coral underline decoration-brand-coral/30 underline-offset-8">MENTE</span>
@@ -93,18 +93,18 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card 1: Top-Left - TCC */}
-              <div className="absolute -top-3 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-teal/30 flex items-center gap-3 animate-float max-w-[200px] z-10">
-                <div className="w-10 h-10 rounded-xl bg-brand-teal-veryLight text-brand-teal flex items-center justify-center flex-shrink-0">
-                  <Brain className="w-5 h-5" />
+              <div className="absolute -top-3 -left-2 sm:-left-8 bg-white/95 backdrop-blur-md p-2.5 sm:p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-teal/30 flex items-center gap-2.5 sm:gap-3 animate-float max-w-[160px] sm:max-w-[200px] z-10">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-brand-teal-veryLight text-brand-teal flex items-center justify-center flex-shrink-0">
+                  <Brain className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <span className="font-serif font-bold text-sm text-brand-dark block leading-tight">TCC</span>
-                  <span className="font-sans text-[11px] text-brand-muted leading-tight block">Cognitivo-Comportamental</span>
+                  <span className="font-serif font-bold text-xs sm:text-sm text-brand-dark block leading-tight">TCC</span>
+                  <span className="font-sans text-[10px] sm:text-[11px] text-brand-muted leading-tight block">Cognitivo-Comportamental</span>
                 </div>
               </div>
 
-              {/* Floating Card 2: Mid-Right - Supervisão */}
-              <div className="absolute top-1/3 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-3 animate-float-delayed max-w-[195px] z-10">
+              {/* Floating Card 2: Mid-Right - Supervisão (visible on tablet/desktop) */}
+              <div className="hidden sm:flex absolute top-1/3 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 items-center gap-3 animate-float-delayed max-w-[195px] z-10">
                 <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
                   <GraduationCap className="w-5 h-5" />
                 </div>
@@ -115,24 +115,24 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card 3: Lower-Left - DBT */}
-              <div className="absolute bottom-[12%] -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-sky-300/80 flex items-center gap-3 animate-float-slow max-w-[210px] z-10">
-                <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
-                  <Scale className="w-5 h-5" />
+              <div className="absolute bottom-[10%] -left-2 sm:-left-8 bg-white/95 backdrop-blur-md p-2.5 sm:p-3.5 rounded-2xl shadow-soft-md border-2 border-sky-300/80 flex items-center gap-2.5 sm:gap-3 animate-float-slow max-w-[170px] sm:max-w-[210px] z-10">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
+                  <Scale className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <span className="font-serif font-bold text-sm text-sky-700 block leading-tight">DBT</span>
-                  <span className="font-sans text-[11px] text-brand-muted leading-tight block">Terapia Comportamental Dialética</span>
+                  <span className="font-serif font-bold text-xs sm:text-sm text-sky-700 block leading-tight">DBT</span>
+                  <span className="font-sans text-[10px] sm:text-[11px] text-brand-muted leading-tight block">Terapia Comportamental</span>
                 </div>
               </div>
 
               {/* Floating Card 4: Bottom-Right - Transformação */}
-              <div className="absolute -bottom-4 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-3 animate-float-reverse-fast max-w-[210px] z-10">
-                <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-5 h-5" />
+              <div className="absolute -bottom-3 -right-2 sm:-right-8 bg-white/95 backdrop-blur-md p-2.5 sm:p-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-2.5 sm:gap-3 animate-float-reverse-fast max-w-[165px] sm:max-w-[210px] z-10">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <span className="font-serif font-bold text-sm text-brand-dark block leading-tight">Transformação</span>
-                  <span className="font-sans text-[11px] text-brand-muted block leading-tight">Mente & Corpo em sintonia</span>
+                  <span className="font-serif font-bold text-xs sm:text-sm text-brand-dark block leading-tight">Transformação</span>
+                  <span className="font-sans text-[10px] sm:text-[11px] text-brand-muted block leading-tight">Mente & Corpo</span>
                 </div>
               </div>
 

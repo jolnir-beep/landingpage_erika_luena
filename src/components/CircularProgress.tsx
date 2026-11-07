@@ -43,7 +43,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
   }[variant];
 
   return (
-    <div className={`flex flex-col items-center text-center group p-6 rounded-2xl bg-white border-2 ${colorStyles.cardBorder} shadow-soft-md hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300`}>
+    <div className={`flex flex-col items-center text-center group p-5 sm:p-6 rounded-2xl bg-white border-2 ${colorStyles.cardBorder} shadow-soft-md hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300`}>
       <div className="relative flex items-center justify-center my-2" style={{ width: size, height: size }}>
         <svg className="transform -rotate-90 w-full h-full">
           {/* Background circle */}

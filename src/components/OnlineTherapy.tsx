@@ -73,19 +73,19 @@ export const OnlineTherapy: React.FC = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-brand-teal/20 to-brand-coral/20 rounded-[2.5rem] blur-xl opacity-60 pointer-events-none" />
 
               {/* Main Session Video Call Mockup Container */}
-              <div className="relative bg-white rounded-[2rem] p-6 shadow-soft-lg border-2 border-brand-teal/30 overflow-hidden">
+              <div className="relative bg-white rounded-[2rem] p-4 sm:p-6 shadow-soft-lg border-2 border-brand-teal/30 overflow-hidden">
                 
                 {/* Mockup Header Bar */}
-                <div className="flex items-center justify-between border-b border-gray-100 pb-4 mb-5">
-                  <div className="flex items-center gap-2.5">
-                    <span className="relative flex h-3 w-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 pb-3 sm:pb-4 mb-4 sm:mb-5">
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-emerald-500" />
                     </span>
-                    <span className="font-sans text-xs font-semibold text-brand-dark">🎥 Sessão em Andamento</span>
+                    <span className="font-sans text-[11px] sm:text-xs font-semibold text-brand-dark">🎥 Sessão em Andamento</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full font-medium">
-                    <Lock className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-emerald-700 bg-emerald-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full font-medium">
+                    <Lock className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     <span>Ambiente Seguro</span>
                   </div>
                 </div>
@@ -117,23 +117,23 @@ export const OnlineTherapy: React.FC = () => {
                 </div>
 
                 {/* Mockup Bottom Stats Strip */}
-                <div className="mt-6 pt-4 border-t border-gray-100 grid grid-cols-3 gap-2 text-center">
-                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-3 rounded-xl">
-                    <span className="font-serif font-bold text-lg text-brand-teal block">500+</span>
-                    <span className="font-sans text-[11px] text-brand-muted block">Sessões Online</span>
+                <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-gray-100 grid grid-cols-3 gap-1.5 sm:gap-2 text-center">
+                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-2 sm:p-3 rounded-xl">
+                    <span className="font-serif font-bold text-base sm:text-lg text-brand-teal block">500+</span>
+                    <span className="font-sans text-[10px] sm:text-[11px] text-brand-muted block leading-tight">Sessões Online</span>
                   </div>
 
-                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-3 rounded-xl">
-                    <span className="font-serif font-bold text-lg text-brand-teal block">98%</span>
-                    <span className="font-sans text-[11px] text-brand-muted block">Satisfação</span>
+                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-2 sm:p-3 rounded-xl">
+                    <span className="font-serif font-bold text-base sm:text-lg text-brand-teal block">98%</span>
+                    <span className="font-sans text-[10px] sm:text-[11px] text-brand-muted block leading-tight">Satisfação</span>
                   </div>
 
-                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-3 rounded-xl">
+                  <div className="bg-brand-bg-alt/90 border-2 border-brand-teal/20 p-2 sm:p-3 rounded-xl">
                     <div className="flex items-center justify-center gap-0.5 text-amber-400">
-                      <Star className="w-4 h-4 fill-amber-400" />
-                      <span className="font-serif font-bold text-lg text-brand-dark ml-0.5">5.0</span>
+                      <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400" />
+                      <span className="font-serif font-bold text-base sm:text-lg text-brand-dark ml-0.5">5.0</span>
                     </div>
-                    <span className="font-sans text-[11px] text-brand-muted block">Avaliações</span>
+                    <span className="font-sans text-[10px] sm:text-[11px] text-brand-muted block leading-tight">Avaliações</span>
                   </div>
                 </div>
 
