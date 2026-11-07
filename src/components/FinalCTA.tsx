@@ -28,7 +28,7 @@ export const FinalCTA: React.FC = () => {
         </div>
 
         {/* Main Headline */}
-        <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-3xl">
+        <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-3xl">
           Sua Transformação Começa na <br className="hidden sm:block" />
           <span className="text-brand-coral">Primeira Conversa</span>
         </h2>
@@ -39,11 +39,11 @@ export const FinalCTA: React.FC = () => {
         </p>
 
         {/* Primary CTA Button */}
-        <div className="pt-4 flex flex-col items-center gap-3">
+        <div className="pt-4 flex flex-col items-center gap-3 w-full sm:w-auto max-w-md sm:max-w-none">
           <CTAButton
             href={WHATSAPP_LINK}
             variant="primary"
-            className="!px-10 !py-5 text-lg shadow-2xl"
+            className="w-full sm:w-auto !px-6 sm:!px-10 !py-4 sm:!py-5 text-base sm:text-lg shadow-2xl text-center"
           >
             Agendar Minha Sessão Agora 👇
           </CTAButton>
@@ -53,10 +53,10 @@ export const FinalCTA: React.FC = () => {
             href={INSTAGRAM_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 hover:border-pink-400/60 backdrop-blur-sm transition-all duration-300 text-sm font-medium text-white/80 hover:text-white"
+            className="group flex items-center justify-center gap-2 w-full sm:w-auto px-4 sm:px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 hover:border-pink-400/60 backdrop-blur-sm transition-all duration-300 text-xs sm:text-sm font-medium text-white/80 hover:text-white"
           >
-            <span className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-              <InstagramIcon className="w-3.5 h-3.5 text-white" />
+            <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+              <InstagramIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
             </span>
             <span>Me siga no Instagram</span>
             <span className="text-pink-300 font-semibold">{INSTAGRAM_HANDLE}</span>

@@ -44,19 +44,19 @@ export const FAQ: React.FC = () => {
                   onClick={() => toggleItem(item.id)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${item.id}`}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-brand-teal/20 rounded-2xl cursor-pointer"
+                  className="w-full px-5 sm:px-6 py-4 sm:py-5 flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-brand-teal/20 rounded-2xl cursor-pointer"
                 >
-                  <span className="font-serif text-lg sm:text-xl font-bold text-brand-dark pr-4 leading-snug">
+                  <span className="font-serif text-base sm:text-xl font-bold text-brand-dark pr-3 sm:pr-4 leading-snug">
                     {item.question}
                   </span>
                   <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
+                    className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
                       isOpen
                         ? 'bg-brand-teal text-white rotate-180'
                         : 'bg-brand-teal-veryLight text-brand-teal'
                     }`}
                   >
-                    <ChevronDown className="w-5 h-5" />
+                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                 </button>
 
@@ -64,7 +64,7 @@ export const FAQ: React.FC = () => {
                 {isOpen && (
                   <div
                     id={`faq-answer-${item.id}`}
-                    className="px-6 pb-6 pt-1 border-t border-brand-teal/15 font-sans text-sm sm:text-base text-brand-muted leading-relaxed text-left animate-fadeIn"
+                    className="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 border-t border-brand-teal/15 font-sans text-sm sm:text-base text-brand-muted leading-relaxed text-left animate-fadeIn"
                   >
                     {item.answer}
                   </div>

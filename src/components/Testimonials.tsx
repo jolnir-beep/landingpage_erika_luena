@@ -49,38 +49,38 @@ export const Testimonials: React.FC = () => {
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
           {/* Main Card */}
-          <div className="bg-white rounded-[2.2rem] p-8 sm:p-12 border-2 border-brand-teal/25 shadow-soft-lg relative transition-all duration-500 overflow-hidden">
+          <div className="bg-white rounded-[2rem] sm:rounded-[2.2rem] p-6 sm:p-12 border-2 border-brand-teal/25 shadow-soft-lg relative transition-all duration-500 overflow-hidden">
             
             {/* Decorative Quote Icon in background */}
-            <Quote className="absolute top-6 right-8 w-24 h-24 text-brand-teal-veryLight/80 pointer-events-none -rotate-12" />
+            <Quote className="absolute top-4 right-4 sm:top-6 sm:right-8 w-16 h-16 sm:w-24 sm:h-24 text-brand-teal-veryLight/80 pointer-events-none -rotate-12" />
 
             <div className="relative z-10 flex flex-col items-start text-left space-y-6">
               
               {/* Rating & Result Badge */}
-              <div className="flex flex-wrap items-center justify-between gap-4 w-full border-b border-gray-100 pb-5">
+              <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 w-full border-b border-gray-100 pb-4 sm:pb-5">
                 <div className="flex items-center gap-1 text-amber-400">
                   {[...Array(current.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-amber-400" />
                   ))}
                 </div>
 
-                <span className="px-3.5 py-1.5 rounded-full bg-brand-teal-veryLight text-brand-teal text-xs font-semibold tracking-wide border border-brand-teal/20">
+                <span className="px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-brand-teal-veryLight text-brand-teal text-[11px] sm:text-xs font-semibold tracking-wide border border-brand-teal/20">
                   {current.resultBadge}
                 </span>
               </div>
 
               {/* Quote text */}
-              <blockquote className="font-serif text-xl sm:text-2xl text-brand-dark italic leading-relaxed min-h-[100px] flex items-center">
+              <blockquote className="font-serif text-lg sm:text-2xl text-brand-dark italic leading-relaxed min-h-[90px] sm:min-h-[100px] flex items-center">
                 "{current.quote}"
               </blockquote>
 
               {/* Author Footer */}
-              <div className="flex items-center gap-4 pt-2">
-                <div className="w-13 h-13 rounded-full bg-gradient-to-br from-brand-teal to-brand-teal-dark text-white font-serif font-bold text-lg flex items-center justify-center shadow-md flex-shrink-0">
+              <div className="flex items-center gap-3.5 sm:gap-4 pt-2">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-teal to-brand-teal-dark text-white font-serif font-bold text-base sm:text-lg flex items-center justify-center shadow-md flex-shrink-0">
                   {current.initials}
                 </div>
                 <div>
-                  <h4 className="font-serif font-bold text-lg text-brand-dark leading-tight">{current.name}</h4>
+                  <h4 className="font-serif font-bold text-base sm:text-lg text-brand-dark leading-tight">{current.name}</h4>
                   <p className="font-sans text-xs text-brand-muted">{current.role}</p>
                 </div>
               </div>

@@ -19,7 +19,7 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
   fullWidth = false,
   icon
 }) => {
-  const baseClasses = "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-base tracking-wide transition-all duration-300 transform active:scale-98 shadow-md cursor-pointer select-none";
+  const baseClasses = "inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-medium text-sm sm:text-base tracking-wide transition-all duration-300 transform active:scale-98 shadow-md cursor-pointer select-none text-center";
 
   let variantClasses = "";
 

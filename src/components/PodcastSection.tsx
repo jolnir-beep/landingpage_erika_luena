@@ -91,7 +91,7 @@ export const PodcastSection: React.FC = () => {
               href={SPOTIFY_PODCAST_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-[#1DB954] hover:bg-[#1ed760] text-white font-semibold text-sm transition-all duration-300 shadow-[0_8px_30px_rgba(29,185,84,0.40)] hover:shadow-[0_8px_30px_rgba(29,185,84,0.60)] hover:-translate-y-0.5 active:scale-95"
+              className="group inline-flex items-center justify-center gap-3 w-full sm:w-auto px-6 py-4 rounded-2xl bg-[#1DB954] hover:bg-[#1ed760] text-white font-semibold text-sm transition-all duration-300 shadow-[0_8px_30px_rgba(29,185,84,0.40)] hover:shadow-[0_8px_30px_rgba(29,185,84,0.60)] hover:-translate-y-0.5 active:scale-95"
             >
               <SpotifyIcon className="w-5 h-5 flex-shrink-0" />
               <span>Ouvir no Spotify</span>
@@ -108,21 +108,21 @@ export const PodcastSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-3">
 
             {/* Player Preview Card */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mb-5 flex items-center gap-4">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-5 mb-5 flex items-center gap-3 sm:gap-4">
               {/* Fake waveform / album art placeholder */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1DB954] via-emerald-600 to-brand-teal-dark flex items-center justify-center flex-shrink-0 shadow-md">
-                <Mic className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-[#1DB954] via-emerald-600 to-brand-teal-dark flex items-center justify-center flex-shrink-0 shadow-md">
+                <Mic className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-sans text-[11px] text-white/40 uppercase tracking-wider mb-0.5">Podcast em destaque</p>
-                <p className="font-serif text-base font-bold text-white leading-tight truncate">{PODCAST_NAME}</p>
-                <p className="font-sans text-xs text-white/50 mt-0.5">Erica Luena • Psicóloga Clínica</p>
+                <p className="font-sans text-[10px] sm:text-[11px] text-white/40 uppercase tracking-wider mb-0.5">Podcast em destaque</p>
+                <p className="font-serif text-sm sm:text-base font-bold text-white leading-tight truncate">{PODCAST_NAME}</p>
+                <p className="font-sans text-[11px] sm:text-xs text-white/50 mt-0.5">Erica Luena • Psicóloga Clínica</p>
               </div>
               <a
                 href={SPOTIFY_PODCAST_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-full bg-[#1DB954] hover:bg-[#1ed760] flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md flex-shrink-0"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#1DB954] hover:bg-[#1ed760] flex items-center justify-center transition-all duration-200 hover:scale-110 shadow-md flex-shrink-0"
                 aria-label="Ouvir no Spotify"
               >
                 <Play className="w-4 h-4 text-white ml-0.5" />
@@ -138,7 +138,7 @@ export const PodcastSection: React.FC = () => {
                   href={SPOTIFY_PODCAST_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/8 hover:border-white/20 transition-all duration-200 cursor-pointer"
+                  className="group flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/8 hover:border-white/20 transition-all duration-200 cursor-pointer"
                 >
                   {/* Episode number */}
                   <span className="font-serif text-xs font-bold text-white/30 group-hover:text-white/50 transition-colors w-5 flex-shrink-0">

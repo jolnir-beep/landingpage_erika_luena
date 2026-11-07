@@ -57,19 +57,19 @@ export const Header: React.FC = () => {
           : 'bg-brand-bg/90 backdrop-blur-sm border-b border-brand-teal/15'
       }`}
     >
-      <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand / Logo */}
-        <a href="#inicio" className="flex items-center gap-2.5 group text-left flex-shrink-0">
-          <div className="w-8 h-8 rounded-lg bg-brand-teal/15 text-brand-teal flex items-center justify-center group-hover:scale-105 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300 shadow-xs">
+        <a href="#inicio" className="flex items-center gap-2 sm:gap-2.5 group text-left flex-shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-brand-teal/15 text-brand-teal flex items-center justify-center group-hover:scale-105 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300 shadow-xs flex-shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 12C10.5 8.5 7 5 3 6.5C1.5 7.5 1 10 2.5 12C4 14 7 14.5 10 13.5C9 15.5 8 18 9 20C9.5 21 11 21.5 12 20C13 21.5 14.5 21 15 20C16 18 15 15.5 14 13.5C17 14.5 20 14 21.5 12C23 10 22.5 7.5 21 6.5C17 5 13.5 8.5 12 12Z" />
             </svg>
           </div>
           <div className="flex flex-col">
-            <span className="font-serif text-2xl font-bold tracking-tight text-brand-dark group-hover:text-brand-teal transition-colors leading-tight">
+            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-dark group-hover:text-brand-teal transition-colors leading-tight">
               Erica Luena
             </span>
-            <span className="font-sans text-[11px] uppercase tracking-widest text-brand-teal font-medium -mt-0.5">
+            <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-widest text-brand-teal font-medium -mt-0.5">
               Psicóloga Clínica
             </span>
           </div>
@@ -125,13 +125,13 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Mobile Hamburger Toggle */}
-        <div className="flex md:hidden items-center gap-3">
-          <CTAButton href="#cta-final" variant="primary" className="!px-4 !py-2 text-xs">
+        <div className="flex md:hidden items-center gap-2 sm:gap-3">
+          <CTAButton href="#cta-final" variant="primary" className="!px-3 sm:!px-4 !py-1.5 sm:!py-2 text-xs">
             Agendar
           </CTAButton>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-brand-dark hover:text-brand-teal focus:outline-none"
+            className="p-1.5 sm:p-2 text-brand-dark hover:text-brand-teal focus:outline-none"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >

@@ -24,7 +24,7 @@ export const SectionBadge: React.FC<SectionBadgeProps> = ({
   }
 
   return (
-    <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-wide uppercase transition-all duration-300 shadow-sm ${styleClasses} ${className}`}>
+    <div className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border text-[11px] sm:text-xs font-semibold tracking-wide uppercase transition-all duration-300 shadow-sm ${styleClasses} ${className}`}>
       {icon && <span className="text-sm leading-none">{icon}</span>}
       <span>{text}</span>
     </div>

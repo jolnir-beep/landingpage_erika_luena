@@ -61,13 +61,13 @@ export const AboutSection: React.FC = () => {
               </div>
 
               {/* Floating Badge Overlay */}
-              <div className="absolute -bottom-6 -right-4 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
-                  <Award className="w-5 h-5" />
+              <div className="absolute -bottom-6 right-2 sm:-right-4 bg-white/95 backdrop-blur-md px-4 sm:px-5 py-3 sm:py-3.5 rounded-2xl shadow-soft-md border-2 border-brand-coral/35 flex items-center gap-2.5 sm:gap-3">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-coral-soft text-brand-coral flex items-center justify-center flex-shrink-0">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div className="text-left">
-                  <span className="font-serif font-bold text-sm text-brand-dark block">CRP: 06/159579</span>
-                  <span className="font-sans text-[11px] text-brand-muted block">Psicóloga Clínica Ativa</span>
+                  <span className="font-serif font-bold text-xs sm:text-sm text-brand-dark block">CRP: 06/159579</span>
+                  <span className="font-sans text-[10px] sm:text-[11px] text-brand-muted block">Psicóloga Clínica Ativa</span>
                 </div>
               </div>
 
